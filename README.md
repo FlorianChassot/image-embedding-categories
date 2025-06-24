@@ -1,19 +1,34 @@
 # image-embedding-categories
 
-This repository contains code and experiments for image embedding and clustering.
+This project explores unsupervised image clustering using semantic embeddings — with the goal of discovering meaningful visual categories without predefined labels.
 
-The main objective is to explore methods for grouping images without predefined categories — by analyzing their semantic embeddings.
+## What It Does
 
-We’re currently focusing on social media images to see if we can discover clusters and patterns in their content, and whether these clusters correlate with engagement or other factors.
+- Extracts embeddings from images using ViT / CLIP
+- Clusters images (K-Means) based on visual similarity
 
-## Tech Stack
+- Tests alignment with existing categories (e.g. Reddit subreddits)
 
-1. Python
+## Current Focus
 
-2. Transformers (ViT base model)
+- Fetching images from 8 Reddit subreddits using arctic_shift
 
-3. Clustering algorithms (e.g. K-Means, DBSCAN)
+- Embedding + clustering shows strong grouping (up to 99% match)
+
+- CLIP-based naming improves cluster clarity
+
+- Exploring a pipeline to auto-label clusters via LLMs
+
+## Stack
+
+- Python
+
+- HuggingFace Transformers (ViT / CLIP)
+
+- scikit-learn (KMeans)
+
+- Reddit API via arctic_shift
 
 ## Status
 
-This is a work in progress — a personal project to learn and experiment with unsupervised image clustering.
+Personal learning project – work in progress!
