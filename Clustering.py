@@ -3,6 +3,7 @@ import torch
 from sklearn.cluster import KMeans
 from collections import defaultdict, Counter
 import numpy as np
+from k_means_constrained import KMeansConstrained
 
 with open("output/embeddings.pkl", "rb") as f:
     data = pickle.load(f)
@@ -12,8 +13,21 @@ print(embeddings.shape)
 
 ##Change this for the amount of categories wanted
 AMOUNT_OF_CLUSTERS = 8
-kmeans = KMeans(n_clusters=8, random_state=42)
-clusters = kmeans.fit_predict(embeddings)
+MIN_CLUSTER_SIZE_RATIO = 0.04
+##kmeans = KMeans(n_clusters=AMOUNT_OF_CLUSTERS, random_state=42)
+##clusters = kmeans.fit_predict(embeddings)
+
+total_points = len(embeddings)
+min_size = int(MIN_CLUSTER_SIZE_RATIO * total_points)  # at least 10% of total in each cluster
+
+clf = KMeansConstrained(
+    n_clusters=AMOUNT_OF_CLUSTERS,
+    size_min=min_size,
+    random_state=42
+)
+
+clusters = clf.fit_predict(embeddings)
+
 cluster_to_labels = defaultdict(list)
 label_to_clusters = defaultdict(list)
 
@@ -54,3 +68,13 @@ for label in sorted(set(labels)):
         for cid, cnt in sorted(other_clusters, key=lambda x: -x[1]):
             print(f"    - Cluster {cid}: {cnt} ({cnt/total*100:.2f}%)")
     print()
+
+    # Add cluster assignments to data
+for i, cluster_id in enumerate(clusters):
+    data[i]["cluster"] = int(cluster_id)  # Ensure it's JSON serializable if needed
+
+# Save to new file
+with open("output/clustered_data.pkl", "wb") as f:
+    pickle.dump(data, f)
+
+print("Saved clustered data to output/clustered_data.pkl")

@@ -1,0 +1,130 @@
+[
+  {
+    "cluster_id": 0,
+    "category": "Fantasy Dragon Art",
+    "descriptions": [
+      "Furry art, contrasting emotions, dark humor, character expression.",
+      "Fantasy artwork, dragon battle, medieval, magic, adventure, heroic quest.",
+      "Fantasy art, dragon companion, mythical creatures, digital illustration.",
+      "Fantasy art, mythological creature, epic battle, digital painting.",
+      "Fantasy art, dragon illustration, mythical creature, digital painting.",
+      "Fantasy art, medieval battle, dragon, epic war, dark atmosphere.",
+      "Dark fantasy, horror art, skeletal dragon, mythical creature illustration.",
+      "Fantasy art, mythical creature, dragon, digital painting, flying beast.",
+      "Fantasy art, mythical creatures, dragons, surreal landscape, digital painting.",
+      "Fantasy artwork, dragon encounter, magical landscape, digital painting."
+    ]
+  },
+  {
+    "cluster_id": 1,
+    "category": "Humor & Memes",
+    "descriptions": [
+      "Humor, parenting choices, post-apocalyptic, meme, fatherhood preferences.",
+      "Meme, music reference, Justin Timberlake, pop culture humor.",
+      "Job hunting struggles and interview experiences meme.",
+      "Motorcycle rider frustration, safety message, anti-phone distraction jacket.",
+      "Humorous celebrity reaction meme about Power Rangers and Chuck Norris.",
+      "Anime, manga, fantasy swords, oversized weapons, character art, fan art.",
+      "Gaming humor, consumer anticipation, meme about Nintendo Switch purchase.",
+      "Humor, animation redesign, character comparison, internet meme, nostalgia reaction.",
+      "Humorous flowchart about biking, survival, and daily routine.",
+      "Humor, fails, accidents, unexpected situations, funny fall compilations."
+    ]
+  },
+  {
+    "cluster_id": 2,
+    "category": "Digital Collectible Card Games",
+    "descriptions": [
+      "Digital collectible card game, fantasy, strategy, Hearthstone character.",
+      "Digital collectible card game, fantasy, strategy, tabletop gaming.",
+      "Digital collectible card game, fantasy, magic, strategy, Hearthstone.",
+      "Digital collectible card game, fantasy, strategy, Hearthstone expansion.",
+      "Hearthstone card, fantasy game, collectible card, digital strategy.",
+      "Hearthstone collectible card game, fantasy strategy, Shaman class.",
+      "Digital collectible card game, fantasy, strategy, Hearthstone cards.",
+      "Digital art, dark fantasy, surreal character design, graffiti background.",
+      "Hearthstone fan art, fantasy card game, humorous card design.",
+      "Custom Hearthstone card featuring fantasy character, game mechanics, meme."
+    ]
+  },
+  {
+    "cluster_id": 3,
+    "category": "Motorcycle Lifestyle",
+    "descriptions": [
+      "Motorcycles, outdoor scenic rides, sportbike photography, travel and adventure.",
+      "Motorcycle maintenance or repair at night with portable lighting.",
+      "Vehicles, motorcycles, cars, parking lot, outdoor, sunny day.",
+      "Motorcycle riding, sportbike, Kawasaki, gear, street riding.",
+      "Night sky photography with motorcycle on rural dirt road.",
+      "Motorcycle parts, front wheel disc brake, ABS system detail.",
+      "Custom motorcycles, urban street culture, sticker art, vintage bike enthusiasts.",
+      "Motorcycle enthusiasts, biking lifestyle, outdoor riding gear, sport bikes.",
+      "Motorcycle, Suzuki, transportation, vehicle, outdoor, parked, chrome, black, engine, two-wheeler",
+      "Motorcycle photography, sport bike, road trip, vehicle enthusiasts, speed."
+    ]
+  },
+  {
+    "cluster_id": 4,
+    "category": "Fashion Portraits",
+    "descriptions": [
+      "Portrait photography, fashion, personal style, modern, natural light, expression.",
+      "Fashion, lingerie, portrait, modeling, sensual, studio, beauty, glamour.",
+      "Fashion portrait, male model, stylish casual wear, studio photography.",
+      "Anime-style fantasy character, digital art, female, elegant pose.",
+      "Lifestyle, street photography, fashion, candid portrait, urban exploration.",
+      "Portrait photography, outdoor, natural light, casual, artistic, shallow depth.",
+      "Artistic outdoor portrait, fashion, serene, nature, floral, elegance, vintage style.",
+      "Gothic fashion, dark aesthetics, alternative portrait, artistic black-and-white.",
+      "Portrait photography, fashion, casual wear, headscarf, natural pose.",
+      "Fashion, swimwear, summer, outdoor, portrait, beauty, lifestyle, nature."
+    ]
+  },
+  {
+    "cluster_id": 5,
+    "category": "Anime Art",
+    "descriptions": [
+      "Anime fan art, character portrait, digital illustration, stylized drawing.",
+      "Anime-style character art showing emotional progression or transformation.",
+      "Historical awareness, political satire, social commentary, internet meme culture.",
+      "Anime-style pencil sketch of a surprised young boy character.",
+      "Anime-style catgirl character illustration, fantasy, digital art.",
+      "Hand-drawn sketch, cycling, nature, mountains, trees, road, outdoor adventure.",
+      "Humorous historical anime-style comic with awkward social interaction.",
+      "Anime-style digital art, female character, pastel colors, floral theme.",
+      "Anime-style fantasy character, magic, water manipulation, digital art.",
+      "Anime-style digital art, female character, fantasy costume, cosplay illustration."
+    ]
+  },
+  {
+    "cluster_id": 6,
+    "category": "Vehicles & Maintenance",
+    "descriptions": [
+      "Outdoor basketball, urban lifestyle, sports, cityscape, recreational activity.",
+      "Motorcycle close-up, paint detail, scratches, outdoor parking, shiny surface.",
+      "Outdoor gear, camping equipment, hiking essentials, backpacking preparation.",
+      "Fantasy stained glass art, mythical creature, digital illustration.",
+      "Motorcycle engine repair, mechanical workshop, DIY maintenance tools.",
+      "Motorcycle fuel tank opening close-up, mechanical detail photography.",
+      "Kitchenware, cookware, stainless steel pots, cooking utensils, household items.",
+      "Motorcycle maintenance, tire wear, safety inspection, riding gear tips.",
+      "Elderly portrait, emotional expression, indoor, candid moment, detailed wrinkles.",
+      "Automotive parts, car maintenance, Honda oil filter replacement."
+    ]
+  },
+  {
+    "cluster_id": 7,
+    "category": "Urban Cityscapes",
+    "descriptions": [
+      "Urban street photography, European architecture, travel, cityscape, walkway.",
+      "Nighttime architecture, illuminated historic building, cityscape photography.",
+      "Cityscape photography, urban skyline, waterfront evening view.",
+      "Aerial cityscape photography, urban landscape, London landmarks view.",
+      "Public art, bronze sculpture, bullfighting scene, urban outdoor monument.",
+      "Urban landscape photography, city skyline, Brooklyn Bridge, waterfront dusk.",
+      "Urban architecture, historical buildings, street photography, city life.",
+      "Urban street scene, British culture, flags, city life, London landmarks.",
+      "Urban landscape, cityscape, skyscrapers, architecture, real estate, downtown view.",
+      "Cityscape, urban skyline, architecture, sunset, waterfront, travel, tourism."
+    ]
+  }
+]
