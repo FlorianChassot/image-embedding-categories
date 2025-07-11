@@ -10,9 +10,9 @@ clip_processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
 # Category labels
 categories = [
-    "animeart", "City", "hearthstone card",
-    "imaginary dragons", "meme", "motorcycle",
-    "mountaineering", "portrait"
+    "Fantasy Dragons", "Humor & Memes", "Digital Collectible Card Games",
+    "Motorcycle Lifestyle", "Portrait & Fashion", "Anime and Fantasy Art",
+    "Outdoor Adventure & Urban Life", "Urban Cityscapes"
 ]
 text_inputs = clip_processor(text=categories, return_tensors="pt", padding=True)
 with torch.no_grad():

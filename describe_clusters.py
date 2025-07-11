@@ -7,6 +7,8 @@ from openai import OpenAI
 
 client = OpenAI()
 
+Sample_per_categories = 25
+
 # Load clustered data
 with open("output/clustered_data.pkl", "rb") as f:
     clustered_data = pickle.load(f)
@@ -21,7 +23,7 @@ cluster_descriptions = []
 
 for cluster_id in sorted(cluster_to_entries.keys()):
     all_entries = cluster_to_entries[cluster_id]
-    sampled_entries = random.sample(all_entries, min(10, len(all_entries)))
+    sampled_entries = random.sample(all_entries, min(Sample_per_categories, len(all_entries)))
 
     results = []
     print(f"Describing {len(sampled_entries)} images for cluster {cluster_id}...")
@@ -52,7 +54,7 @@ for cluster_id in sorted(cluster_to_entries.keys()):
             "description": description
         })
 
-        time.sleep(1.5)
+        time.sleep(1)
 
     cluster_descriptions.append(results)
 

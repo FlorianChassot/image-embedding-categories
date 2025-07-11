@@ -1,0 +1,79 @@
+[
+  {
+    "cluster_id": 0,
+    "category": "Trading Card Game Reveal",
+    "descriptions": [
+      "Digital collectible card game, Pokémon card pack opening results."
+    ]
+  },
+  {
+    "cluster_id": 1,
+    "category": "Dark humor & pop culture",
+    "descriptions": [
+      "Political satire with sci-fi and humor elements.",
+      "Gaming frustration meme with Squid Game character background.",
+      "Dark humor, surreal meme, disturbing text, glitch art, digital aesthetic.",
+      "Professional wrestling event, high-flying stunt, summer sports entertainment.",
+      "Comic art, emotional moment, gorilla and Joker interaction."
+    ]
+  },
+  {
+    "cluster_id": 2,
+    "category": "Interactive Online Games",
+    "descriptions": [
+      "Reddit poll comparing chemical elements in a playful debate format.",
+      "Online community game update, character elimination, user participation."
+    ]
+  },
+  {
+    "cluster_id": 3,
+    "category": "Digital Art & Anime",
+    "descriptions": [
+      "Pixel art, digital drawing, doodles, self-insert, creative expression.",
+      "Pixel art, digital doodles, character design, creative self-expression.",
+      "Anime, cute characters, fan art, quirky, Japanese culture, humor."
+    ]
+  },
+  {
+    "cluster_id": 4,
+    "category": "Internet Humor & Culture",
+    "descriptions": [
+      "Humor, relatable struggles, waking up, pets, funny morning routine.",
+      "Humor, internet culture, tech joke, April memes, cooking analogy.",
+      "Humor, low effort content, minimalism, internet meme, simple joke.",
+      "Technology glitch, calculator error, software bug, mobile app malfunction.",
+      "Anime manga panel, fantasy theme, humorous, light-hearted dialogue.",
+      "Alternative fashion, cosplay, goth, edgy style, self-expression, costume.",
+      "Digital art; pixel art; abstract; glitch aesthetic; retro gaming style.",
+      "Public transportation, urban street scene, city bus, transit system."
+    ]
+  },
+  {
+    "cluster_id": 5,
+    "category": "Funny Animal Memes",
+    "descriptions": [
+      "Funny animal photos, optical illusions, distorted puppy images, humor.",
+      "Humorous gaming meme with cute cat and Elder Scrolls reference.",
+      "Wildlife photography, nature, animals, wolves, forest, outdoors, animal behavior.",
+      "Humor, cats, pets, funny animals, internet memes, cute moments.",
+      "Close-up, funny cat face, pet photography, animal humor.",
+      "Birds in captivity, aviary, pet bird, parrot, animal enclosure.",
+      "Humor, memes, Minecraft, cats, internet culture, surreal funny image."
+    ]
+  },
+  {
+    "cluster_id": 6,
+    "category": "Entertainment and Memes",
+    "descriptions": [
+      "Humor, gaming, scary games, job applications, meme, parody."
+    ]
+  },
+  {
+    "cluster_id": 7,
+    "category": "Digital entertainment humor",
+    "descriptions": [
+      "Car infotainment system playing music from connected smartphone.",
+      "Humor, sarcasm, social media reactions, funny video comments."
+    ]
+  }
+]

@@ -5,6 +5,7 @@ from collections import defaultdict, Counter
 import numpy as np
 from k_means_constrained import KMeansConstrained
 
+
 with open("output/embeddings.pkl", "rb") as f:
     data = pickle.load(f)
 embeddings = torch.stack([entry['embedding'] for entry in data]).numpy()
