@@ -48,11 +48,13 @@ def download_image(url):
 # ========================== PIPELINE STEPS ==========================
 
 def create_embeddings():
+    print("🚀 Starting embedding...")
     embedding_data = []
+    image_counter = 0
+
     for txt_file in os.listdir(INPUT_FILE):
         if not txt_file.endswith(".txt"):
             continue
-        label = os.path.splitext(txt_file)[0]
         file_path = os.path.join(INPUT_FILE, txt_file)
 
         with open(file_path, 'r') as f:
@@ -64,14 +66,19 @@ def create_embeddings():
                 continue
             embedding = extract_embedding(image)
             embedding_data.append({"url": url, "embedding": embedding})
+            image_counter += 1
+
+            if image_counter % 100 == 0:
+                print(f"Processed {image_counter} images...")
 
     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
     with open(os.path.join(OUTPUT_FOLDER, "embeddings.pkl"), "wb") as f:
         pickle.dump(embedding_data, f)
 
-    print("✅ Embeddings Created.")
+    print(f"✅ Embeddings created for {image_counter} images.")
 
 def create_clusters():
+    print("Starting cluster creation")
     with open(os.path.join(OUTPUT_FOLDER, "embeddings.pkl"), "rb") as f:
         data = pickle.load(f)
 
@@ -190,11 +197,11 @@ if __name__ == "__main__":
     parser.add_argument("--entry", action="store_true", help="Label image entries in clusters")
     parser.add_argument("--label", action="store_true", help="Label each cluster with a name")
 
-    parser.add_argument("--input", type=str, default="CountOnceADay/data_sample_test", help="Input folder with .txt files")
-    parser.add_argument("--output", type=str, default="CountOnceADay/output", help="Output folder for results")
+    parser.add_argument("--input", type=str, default="data", help="Input folder with .txt files")
+    parser.add_argument("--output", type=str, default="output", help="Output folder for results")
     parser.add_argument("--sample", type=int, default=25, help="Sample size per cluster for description")
     parser.add_argument("--clusters", type=int, default=8, help="Number of clusters")
-    parser.add_argument("--min-cluster-ratio", type=float, default=0.04, help="Minimum ratio for cluster size")
+    parser.add_argument("--min-cluster-ratio", type=float, default=0.05, help="Minimum ratio for cluster size (0.0 to 1.0)")
 
     args = parser.parse_args()
 
@@ -209,6 +216,10 @@ if __name__ == "__main__":
     if not any([args.embed, args.cluster, args.entry, args.label]):
         args.embed = args.cluster = args.entry = args.label = True
         print("🔁 No specific steps provided — running the full pipeline.")
+
+    if(MIN_CLUSTER_SIZE_RATIO*AMOUNT_OF_CLUSTERS>1):
+        print("The minimum ratio per cluster * the amount of cluster must be equal or lesser than 1")
+        exit(1)
 
     # Create output folder if it doesn't exist
     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
