@@ -5,7 +5,7 @@ from openai import OpenAI
 client = OpenAI()
 
 # Load descriptions from previous step
-with open("output/cluster_descriptions.json", "r", encoding="utf-8") as f:
+with open("experimentationSource/output/cluster_descriptions.json", "r", encoding="utf-8") as f:
     cluster_descriptions = json.load(f)
 
 cluster_names = []
@@ -43,7 +43,7 @@ for cluster_id, entries in enumerate(cluster_descriptions):
     time.sleep(1.5)
 
 # Save to file
-with open("output/cluster_names.json", "w", encoding="utf-8") as f:
+with open("experimentationSource/output/cluster_names.json", "w", encoding="utf-8") as f:
     json.dump(cluster_names, f, ensure_ascii=False, indent=2)
 
-print("Saved category names to output/cluster_names.json")
+print("Saved category names to experimentationSource/output/cluster_names.json")

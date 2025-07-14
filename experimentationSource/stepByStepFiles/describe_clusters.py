@@ -10,7 +10,7 @@ client = OpenAI()
 Sample_per_categories = 25
 
 # Load clustered data
-with open("output/clustered_data.pkl", "rb") as f:
+with open("experimentationSource/output/clustered_data.pkl", "rb") as f:
     clustered_data = pickle.load(f)
 
 # Organize all entries by cluster
@@ -59,7 +59,7 @@ for cluster_id in sorted(cluster_to_entries.keys()):
     cluster_descriptions.append(results)
 
 # Save descriptions
-with open("output/cluster_descriptions.json", "w", encoding="utf-8") as f:
+with open("experimentationSource/output/cluster_descriptions.json", "w", encoding="utf-8") as f:
     json.dump(cluster_descriptions, f, ensure_ascii=False, indent=2)
 
-print("Saved to output/cluster_descriptions.json")
+print("Saved to experimentationSource/output/cluster_descriptions.json")

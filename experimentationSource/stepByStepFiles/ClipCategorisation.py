@@ -19,7 +19,7 @@ with torch.no_grad():
     text_features = clip_model.get_text_features(**text_inputs)
     text_features /= text_features.norm(dim=-1, keepdim=True)
 
-with open("output/embeddings.pkl", "rb") as f:
+with open("experimentationSource/output/embeddings.pkl", "rb") as f:
     data = pickle.load(f)
 
 clip_results = []
@@ -48,7 +48,7 @@ for entry in tqdm(data):
     except Exception as e:
         print(f"Error processing image from {entry['url']}: {e}")
 
-with open("output/clip_classification_results.pkl", "wb") as f:
+with open("experimentationSource/output/clip_classification_results.pkl", "wb") as f:
     pickle.dump(clip_results, f)
 
-print("Done. Saved to output/clip_classification_results.pkl")
+print("Done. Saved to experimentationSource/output/clip_classification_results.pkl")

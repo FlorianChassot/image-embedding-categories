@@ -49,7 +49,7 @@ for txt_file in os.listdir(folder_path):
             })
 
 # Save all embeddings and metadata
-with open("output/embeddings.pkl", "wb") as f:
+with open("experimentationSource/output/embeddings.pkl", "wb") as f:
     pickle.dump(embedding_data, f)
 
 print("Done. Embeddings saved to embeddings.pkl")

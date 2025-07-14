@@ -1,7 +1,7 @@
 import pickle
 from collections import defaultdict, Counter
 
-with open("output/clip_classification_results.pkl", "rb") as f:
+with open("experimentationSource/output/clip_classification_results.pkl", "rb") as f:
     clip_results = pickle.load(f)
 
 # Build confusion matrix: true_label → predicted_label counts

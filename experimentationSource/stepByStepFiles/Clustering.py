@@ -6,7 +6,7 @@ import numpy as np
 from k_means_constrained import KMeansConstrained
 
 
-with open("output/embeddings.pkl", "rb") as f:
+with open("experimentationSource/output/embeddings.pkl", "rb") as f:
     data = pickle.load(f)
 embeddings = torch.stack([entry['embedding'] for entry in data]).numpy()
 labels = [entry['label'] for entry in data]
@@ -70,9 +70,8 @@ for label in sorted(set(labels)):
             print(f"    - Cluster {cid}: {cnt} ({cnt/total*100:.2f}%)")
     print()
 
-    # Add cluster assignments to data
 for i, cluster_id in enumerate(clusters):
-    data[i]["cluster"] = int(cluster_id)  # Ensure it's JSON serializable if needed
+    data[i]["cluster"] = int(cluster_id)  
 
 # Save to new file
 with open("output/clustered_data.pkl", "wb") as f:
